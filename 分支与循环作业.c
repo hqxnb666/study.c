@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-int main_04()
+int _04()
 {
 	/*int a = 0;
 	int b = 0;
