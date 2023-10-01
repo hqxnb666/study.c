@@ -1,42 +1,31 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-struct Book
+#include <string.h>
+struct s
 {
 	char name[20];
-	short price;//55
-
-};//  这个分号必不可缺
-int ma1in()
+	int age;
+};
+ void set_s(struct s* ps)
 {
-    struct Book b1 = { "Cyuyan", 55};
-	 struct Book* pb = &b1;
-	 printf("%s\n", pb->name);
-	 printf("%d\n", pb->price);
-	 //  . 结构体变量。成员
-	 //-> 结构体指针->成员
-
-
-
-	 //name是一个地址
-	 strcpy(b1.name, "C++");//strcpy-string copy-字符串拷贝-库函数-string.h
-	 printf("%s\n", b1.name);
-
-
-
-	 //如何利用pb打印署名价格
-	 printf("%s\n", (*pb).name);
-	 printf("%d\n", (*pb).price);
-	printf("书名:%s\n", b1.name);
-	printf("价格:%d\n", b1.price);
-	b1.price = 15;
-	printf("修改后的价格:%d\n", b1.price);S
-	//利用结构体类型-创建一个该类型的结构体变量
-
-
-
+	(*ps).age = 10;
+	//话可以ps->age = 18;
+	strcpy((*ps).name, "zhangsan");//字符串靠背
+}
+ void print_s(struct s t)
+ {
+	 printf("%s %d", t.name, t.age);
+ }
+int main()
+{
+	//结构体成员的访问
+	//1.   /
+	//2.   ->
+	//结构体变量.成员
+	struct s s = { 0 };
+	//写一个函数给s中存放数据
+	set_s(&s);
+	//写一个函数打印s中的数据
+	print_s(s);
 	return 0;
-	//结构体  人 - 书 复杂对象
-	//名字 身高等等
-	//复杂对象==结构体- 我们自己创造出来的一种类型
-	
 }
