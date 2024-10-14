@@ -1,19 +1,19 @@
-#define _CRT_SECURE_NO_WARNINGS 1>
+#define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
+void PrintMulTable(int N)
+{
+    for (int i = 1; i <= N; ++i)
+    {
+        for (int j = 1; j <= i; ++j)
+        {
+            printf("%d*%d=%2d  ", j, i, j * i);
+        }
+        printf("\n");
+    }
+}
 int main() {
     int a;
-    while (scanf("%d", &a) != EOF) { // 注意 while 处理多个 case
-        for (int i = 0; i < a; i++)
-        {
-            for (int j = 0; j < a; j++)
-            {
-                if (i == 0 || i == a - 1)
-                    printf("* ");
-                else if (j == 0 || j == a - 1)
-                    printf("* ");
-            }
-            printf("\n");
-        }
-    }
+    scanf("%d", &a);
+    PrintMulTable(a);
     return 0;
 }
