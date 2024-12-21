@@ -1,17 +1,17 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include <iostream>
-#include <string>
-#include <algorithm>
-
-using namespace std;
-
+#define _CRT_SECURE_NO_WARNINGS 1
+//#include <iostream>
+#include "AVLTree.h"
+//using namespace std;
 int main()
 {
-	/*int n = 10;
-	cout << n << endl;
-	cin >> n;
-	string str;*/
-	int n = 2;
-	cin >> n;
+	int a[] = { 1,3,4,7,8,6,10 };
+	AVLTree<int, int> a1;
+	for (auto e : a)
+	{
+		a1.insert({ e,e });
+	}
+	
+	a1.InOrder();
+	cout << a1.IsBalance() << endl;
 	return 0;
 }
