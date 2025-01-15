@@ -1,17 +1,17 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-//#include <iostream>
-#include "AVLTree.h"
-//using namespace std;
+#include "Seqlist.h"
 int main()
 {
-	int a[] = { 1,3,4,7,8,6,10 };
-	AVLTree<int, int> a1;
-	for (auto e : a)
-	{
-		a1.insert({ e,e });
-	}
-	
-	a1.InOrder();
-	cout << a1.IsBalance() << endl;
+	SeqList s1;
+	s1.PushBack(1);
+	s1.PushBack(2);
+	s1.PushBack(3);
+	s1.PushBack(4);
+	s1.PushBack(5);
+	s1.PushBack(6);
+	s1.PushFront(11);
+	s1.PushFront(12);
+	s1.PushFront(13);
+	s1.Print();
 	return 0;
 }
